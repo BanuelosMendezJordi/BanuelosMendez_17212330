@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Inicio";
+}
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div style="position:absolute; transform:translateY(-55%)" class="carousel-caption">
+                <h1 style="text-shadow: 0 2px 3px rgba(0,0,0,.8); font-size:60px;">BIENVENIDO</h1>
+                <h3 style="text-shadow: 0 2px 3px rgba(0,0,0,.8);">Administra eventos de manera sencilla</h3>
+                <a class="btn btn-primary btn-lg m-5" href="@Url.Action("About","Home")">Saber más ></a>
+            </div>
+            <div class="carousel-item active">
+                <div class="d-flex align-items-center justify-content-center min-vh-100">
+                    <img src="~/Content/IMG/audience-868074_1280.jpg" class="d-block w-100" alt="Audiencia">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex align-items-center justify-content-center min-vh-100">
+                    <img src="~/Content/IMG/sparkler-677774_1280.jpg" class="d-block w-100" alt="Bengala">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex align-items-center justify-content-center min-vh-100">
+                    <img src="~/Content/IMG/band-691224_1280.jpg" class="d-block w-100" alt="Banda">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex align-items-center justify-content-center min-vh-100">
+                    <img src="~/Content/IMG/lago-di-limides-3025780_1280.jpg" class="d-block w-100" alt="Lago">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>

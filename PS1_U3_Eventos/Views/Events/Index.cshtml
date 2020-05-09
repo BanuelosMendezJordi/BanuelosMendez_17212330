@@ -1,0 +1,65 @@
+﻿@model IEnumerable<PS1_U3_Eventos.Models.Event>
+
+@{
+    ViewBag.Title = "Eventos";
+}
+
+<div style="background-image:url(../../Content/IMG/theater-432045_1280.jpg); background-size: cover; height:100%; width: 100%; position:absolute; overflow-x: hidden;">
+    <div class="m-5 col-12 text-white" style="text-shadow: 0 2px 3px rgba(0,0,0,.8)">
+        <h2>EVENTOS</h2>
+        <h4>Lista de Eventos</h4>
+    </div>
+    <div class="card col-11 mx-auto m-3" style="border:none">
+        <div class="card-body">
+            <a href="@Url.Action("create","Events")" class="btn btn-success btn-sm" style="margin-left: 7px; margin-bottom: 10px;">Añadir +</a>
+            <table class="table text-center table-bordered table-sm">
+                <tr>
+                    <th>
+                        Ciudad
+                    </th>
+                    <th>
+                        Evento
+                    </th>
+                    <th>
+                        Descripcion
+                    <th>
+                        Fecha
+                    </th>
+                    <th>
+                        Disponibilidad
+                    </th>
+                    <th>
+                        Opciones
+                    </th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.City.CityName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EventName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EventDescription)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fecha)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Availability)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-primary btn-sm" })
+                            @Html.ActionLink("Detalles", "Details", new { id = item.Id }, new { @class = "btn btn-secondary btn-sm" })
+                            @Html.ActionLink("Eliminar", "Delete", new { id = item.Id }, new { @class = "btn btn-danger btn-sm" })
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+

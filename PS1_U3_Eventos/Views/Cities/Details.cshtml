@@ -1,0 +1,52 @@
+﻿@model PS1_U3_Eventos.Models.City
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+    <div style="background-image:url(../../Content/IMG/urban-438393_1280.jpg); background-size: cover; min-height:100%; min-width: 100%; position:absolute; overflow:hidden;">
+        <div class="m-5 col-12 text-white" style="text-shadow: 0 2px 3px rgba(0,0,0,.8)">
+            <h2>CIUDADES</h2>
+            <h4>Detalles</h4>
+        </div>
+        <div class="m-5 card col-md-4">
+            <div class="card-title"></div>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.CityName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CityName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CityDescription)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CityDescription)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Population)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Population)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Lada)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Lada)
+                </dd>
+
+            </dl>
+            <p>
+                <a href="@Url.Action("Index","Cities")" class="btn btn-secondary">Regresar</a>
+            </p>
+        </div>
+    </div>

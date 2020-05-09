@@ -1,0 +1,77 @@
+﻿@model PS1_U3_Eventos.Models.Event
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div style="background-image:url(../../Content/IMG/theater-432045_1280.jpg); background-size: cover; min-height:100%; min-width: 100%; position:absolute; overflow:hidden;">
+    <div class="m-5 col-12 text-white" style="text-shadow: 0 2px 3px rgba(0,0,0,.8)">
+        <h2>EVENTOS</h2>
+        <h4 class="text-danger">¡¿Eliminar datos del Sistema?!</h4>
+    </div>
+    <div class="m-5 card col-md-4">
+        <div class="card-title"></div>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.City.CityName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.City.CityName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EventName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EventName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EventDescription)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EventDescription)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Fecha)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Quota)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Quota)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Availability)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Availability)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Eliminar" class="btn btn-danger" />
+                    <a href="@Url.Action("Index","Events")" class="btn btn-secondary">Regresar</a>
+                 </div>
+            </div>
+        }
+    </div>
+</div>
