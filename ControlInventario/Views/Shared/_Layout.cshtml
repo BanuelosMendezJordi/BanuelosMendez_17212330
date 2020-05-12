@@ -243,12 +243,12 @@
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                     @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
                     {
-                    @Html.AntiForgeryToken()
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()">Cerrar sesión</a>
-                        </li>
-                    </ul>
+                        @Html.AntiForgeryToken()
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()">Cerrar sesión</a>
+                            </li>
+                        </ul>
                     }
                 </div>
             </div>
@@ -264,6 +264,8 @@
 
     <!-- Custom scripts for all pages-->
     <script src="~/Scripts/sb-admin-2.js"></script>
+    <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <link href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet" />
 
 
     @RenderSection("scripts", required: false)

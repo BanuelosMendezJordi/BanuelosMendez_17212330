@@ -26,7 +26,8 @@
         <th>
             @Html.DisplayNameFor(model => model.Address)
         </th>
-        <th></th>
+        <th>
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -35,7 +36,7 @@
             @Html.DisplayFor(modelItem => item.SupplierCode)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.SupplierName)
+            <a href="@Url.Action("ProductBySupplier","Products", new {SupplierId=item.SupplierId})">@item.SupplierName</a>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Email)
@@ -50,6 +51,8 @@
             @Html.ActionLink("Edit", "Edit", new { id=item.SupplierId }) |
             @Html.ActionLink("Details", "Details", new { id=item.SupplierId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.SupplierId })
+        </td>
+        <td>
         </td>
     </tr>
 }
